@@ -11,8 +11,8 @@ public class App {
     }
 
     private static void run(){
-        int [] mas = {11, 3, 14, 16, 7};
-        Array array = new Array(mas);
+        Array array = new Array();
+        array.inputArray();
         array.sortArray();
         array.printArray();
     }

@@ -1,16 +1,32 @@
 package com.yulia.array;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Array {
     private int [] array;
 
-    public Array(int[] array) {
+    public void setArray(int[] array) {
         this.array = array;
+    }
+
+    public Array() {
     }
 
     @Override
     public String toString() {
         return "SortArray = " + Arrays.toString(array) ;
+    }
+
+    public void inputArray(){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter array: ");
+        String str = in.nextLine();
+        String strArray[] = str.split(" ");
+        int array[] = new int[strArray.length];
+        for (int i = 0; i < strArray.length; i++) {
+            array[i] = Integer.parseInt(strArray[i]);
+        }
+        setArray(array);
     }
 
     public void sortArray(){
